@@ -115,7 +115,8 @@ body {
     width: 100px; 
     height: 100px; 
     border-radius: 50%;
-    background-color: #000;
+    /* Background color hatae se logo ka image achha dikhega */
+    background-color: transparent; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,9 +126,11 @@ body {
 }
 
 .logo-circle-wrapper img {
+    /* Logo ko circle ke andar achhi tarah se fit karne ke liye */
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain;
+    object-fit: cover; 
+    border-radius: 50%; /* Image ko bhi circle kar do */
 }
 
 .company-name {

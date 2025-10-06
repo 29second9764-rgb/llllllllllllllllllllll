@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LOTUS 606 - WhatsApp Chat</title>
+<title>FULL HOUSE 365 - WhatsApp Chat</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -20,12 +20,12 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
 // Initializes the Pixel and sends the PageView event
-fbq('init', '1160738952593640');
+fbq('init', '777509118259514');
 fbq('track', 'PageView'); 
 </script>
 <noscript>
     <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1160738952593640&ev=PageView&noscript=1"
+    src="https://www.facebook.com/tr?id=777509118259514&ev=PageView&noscript=1"
     />
 </noscript>
 <style>
@@ -112,10 +112,10 @@ body {
 }
 
 .logo-circle-wrapper {
-    width: 130px; /* Logo size increased to 130px */
-    height: 130px; /* Logo size increased to 130px */
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    background-color: transparent; 
+    background-color: #000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,8 +127,7 @@ body {
 .logo-circle-wrapper img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover; 
-    border-radius: 50%; 
+    object-fit: contain;
 }
 
 .company-name {
@@ -213,86 +212,93 @@ body {
 </style>
 
 <script>
-// WhatsApp Number: +66 86 418 3906 (Thailand)
-const whatsappLink = "https://wa.me/66864183906?text=Hello,%20I%20Need%20%21D"; 
-const PIXEL_DELAY_MS = 100;
-let timer = 1; // Countdown set to 1 second
+// WhatsApp Link (for all devices):
+const whatsappLink = "https://wa.me/917888011626?text=Hello,%20I%20Need%20%21D"; 
+// Meta Pixel Delay (unchanged for mobile reliability)
+const PIXEL_DELAY_MS = 500;
+
+// *** TIMER SET TO 2.0 SECONDS ***
+let timer = 2.0; 
 let intervalId;
 
 function redirectToWhatsApp() {
-    // 🌟 Lead Event Trigger 🌟
-    if (typeof fbq === 'function') {
-        fbq('track', 'Lead'); 
-    }
-    
-    // 2. Wait 100ms for the pixel event to send, then redirect
-    setTimeout(() => {
-        window.location.replace(whatsappLink);
-    }, PIXEL_DELAY_MS);
+    // 1. Lead Event Trigger
+    if (typeof fbq === 'function') {
+        fbq('track', 'Lead'); 
+    }
+    
+    // 2. Wait 500ms for the pixel event to finish sending, then redirect
+    setTimeout(() => {
+        window.location.replace(whatsappLink);
+    }, PIXEL_DELAY_MS);
 }
 
 function updateCountdown() {
-    const countdownElement = document.getElementById('countdown-display');
-    
-    if (countdownElement) {
-        countdownElement.textContent = timer;
-    }
+    const countdownElement = document.getElementById('countdown-display');
+    
+    if (countdownElement) {
+        // Display the timer formatted to one decimal place
+        countdownElement.textContent = timer.toFixed(1);
+    }
 
-    if (timer <= 0) {
-        clearInterval(intervalId);
-        redirectToWhatsApp();
-        return;
-    }
+    // Stop and redirect when the timer reaches or drops below 0
+    if (timer <= 0) {
+        clearInterval(intervalId);
+        redirectToWhatsApp();
+        return;
+    }
 
-    timer--;
+    // Decrease the timer by 0.1 seconds every 100ms
+    timer = timer - 0.1;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    updateCountdown(); 
-    intervalId = setInterval(updateCountdown, 1000);
+    updateCountdown(); 
+    // Run updateCountdown() every 100 milliseconds
+    intervalId = setInterval(updateCountdown, 100);
 });
 
 
 function manualRedirect(){
-    clearInterval(intervalId);
-    redirectToWhatsApp();
+    clearInterval(intervalId);
+    redirectToWhatsApp();
 }
 </script>
 </head>
 <body>
 
 <div class="header">
-        <div class="menu-icon"></div>
+    <div class="menu-icon"></div>
     
-        <div class="whatsapp-logo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
-        WhatsApp
-    </div>
+    <div class="whatsapp-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+        WhatsApp
+    </div>
     
-        <div class="download-icon"></div>
+    <div class="download-icon"></div>
 </div>
 
 <div class="content">
     
-        <div class="logo-circle-wrapper">
-                    <img src="LOTUS 606.png" alt="LOTUS 606 Logo"> 
-    </div>
-    <div class="company-name">LOTUS 606</div>
-    
-        <button class="chat-button" onclick="manualRedirect()">
+    <div class="logo-circle-wrapper">
+        <img src="fullhouse-logo.jpg.jpg" alt="FULL HOUSE 365 Logo"> 
+    </div>
+    <div class="company-name">FULL HOUSE 365</div>
+    
+    <button class="chat-button" onclick="manualRedirect()">
         Continue to chat in 
-        <span id="countdown-display">1</span>
-    </button>
-    
+        <span id="countdown-display">2.0</span>
+    </button>
+    
     <div class="chat-message-preview-wrapper">
         <div class="chat-message-preview">
             Hello, I Need !D
         </div>
     </div>
     
-        <div class="download-app-section">
-        Don't have WhatsApp yet? <a href="https://www.whatsapp.com/download/" target="_blank">Download</a>
-    </div>
+    <div class="download-app-section">
+        Don't have WhatsApp yet? <a href="https://www.whatsapp.com/download/" target="_blank">Download</a>
+    </div>
 </div>
 
 </body>
